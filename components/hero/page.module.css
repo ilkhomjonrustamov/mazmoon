@@ -1,0 +1,122 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.hero_title {
+  color: var(--black, #292929);
+  font-family: var(--interface-extrabold);
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%; /* 96px */
+}
+.hero_title span {
+  color: var(--grey-24, #c2c2c3);
+  padding-left: 8px;
+}
+
+.plusses {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.plus:nth-child(1) .plus p {
+  background-color: red;
+  color: wheat;
+}
+/* right side */
+.right {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 16px;
+  flex-direction: column;
+}
+.dids {
+  display: flex;
+  padding: 24px 32px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 24px;
+  background: var(--apple-grey, #f5f5f7);
+}
+.dids_title {
+  color: var(--black, #292929);
+
+  /* Heading 1/Bold */
+  font-family: var(--interface-bold);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 48px */
+}
+.dids_desc {
+  color: var(--grey-64, #5d5d5f);
+
+  /* Title 2/Medium */
+  font-family: var(--interface-medium);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+@media (max-width: 1300px) {
+  .hero_title {
+    font-size: 60px;
+    line-height: 120%;
+  }
+}
+@media (max-width: 768px) {
+  .left {
+    gap: 24px;
+  }
+  .hero_title {
+    font-size: 32px;
+    line-height: 120%;
+  }
+
+  .plusses {
+    flex-wrap: wrap;
+  }
+  .plus {
+    font-size: 14px;
+    line-height: 140%; /* 19.6px */
+  }
+
+  .dids {
+    padding: 16px;
+    gap: 8px;
+  }
+  .dids_desc {
+    font-size: 14px;
+    line-height: 140%; /* 19.6px */
+  }
+  .dids_title {
+    font-size: 24px;
+    line-height: 140%; /* 33.6px */
+  }
+}
+@media (max-width: 550px) {
+  .right {
+    flex-direction: row;
+  }
+  .hero {
+    flex-direction: column;
+    gap: 80px;
+  }
+}

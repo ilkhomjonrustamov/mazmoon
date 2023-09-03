@@ -1,0 +1,144 @@
+.box {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 16px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.desc {
+  color: var(--grey-64, #5d5d5f);
+  font-family: var(--interface);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 24px;
+  max-width: 656px;
+}
+.working_countries {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-top: 40px;
+}
+.working_country {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+  max-width: 294px;
+}
+.number {
+  font-family: var(--interface-bold);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  background: linear-gradient(153deg, #3c4bdc 0%, #7b7dff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.title {
+  color: var(--black, #020105);
+  font-family: var(--interface);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.right {
+  position: relative;
+}
+.image {
+  width: 100%;
+  object-fit: contain;
+  height: 100%;
+}
+.logo {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+}
+.img_info {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background: var(--white, #fff);
+  padding: 12px 24px;
+  align-items: flex-start;
+  gap: 8px;
+}
+.name {
+  color: var(--black, #292929);
+  font-family: var(--interface-semibold);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+.position {
+  color: var(--grey-40, #9a999b);
+  font-family: var(--interface);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+@media (max-width: 1300px) {
+  .box {
+    gap: 24px;
+  }
+  .desc {
+    font-size: 14px;
+    line-height: 140%;
+    gap: 24px;
+    padding-top: 32px;
+  }
+  .working_countries {
+    padding-top: 24px;
+    gap: 16px;
+  }
+  .title {
+    font-size: 14px;
+    line-height: 140%;
+  }
+  .title span {
+    font-size: 14px;
+    line-height: 140%;
+    padding-left: 0;
+  }
+  .img_info {
+    padding: 14px 24px 14px 16px;
+  }
+  .name {
+    font-size: 16px;
+    line-height: 150%;
+  }
+  .position {
+    font-size: 12px;
+    line-height: 130%;
+  }
+}
+@media (max-width: 768px) {
+  .box {
+    grid-template-columns: 1fr;
+    place-items: unset;
+  }
+  .logo {
+    display: none;
+  }
+}
