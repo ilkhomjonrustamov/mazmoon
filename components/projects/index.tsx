@@ -44,7 +44,7 @@ export default function Project() {
     },
     {
       image: "/media/projects/project11.png",
-      title: "Cavsar tour - turistik agentligi uchun web sayt dizayni",
+      title: "Hirelancer - frilanserlar uchun ishlangan web sayt dizayni",
     },
   ];
   return (

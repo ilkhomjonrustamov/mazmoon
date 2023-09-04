@@ -38,6 +38,16 @@
   background-color: red;
   color: wheat;
 }
+.plus_title {
+  color: var(--grey-64, #5d5d5f);
+
+  /* Subtitle/Medium */
+  font-family: var(--interface-medium);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 33.6px */
+}
 /* right side */
 .right {
   display: flex;
@@ -79,6 +89,14 @@
   .hero_title {
     font-size: 60px;
     line-height: 120%;
+  }
+  .plus_title {
+    color: var(--grey-64, #5d5d5f);
+    font-family: var(--interface);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
   }
 }
 @media (max-width: 768px) {

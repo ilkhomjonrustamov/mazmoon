@@ -6,16 +6,16 @@ export default function Hero() {
       title: "UX/UI dizayni",
     },
     {
-      title: "UX/UI dizayni",
+      title: "Tadqiqot",
     },
     {
-      title: "UX/UI dizayni",
+      title: "Dizaynni qo'llab-quvvatlash",
     },
     {
-      title: "UX/UI dizayni",
+      title: "Autstaffing",
     },
     {
-      title: "UX/UI dizayni",
+      title: "Kreativ",
     },
   ];
   return (
@@ -30,7 +30,7 @@ export default function Hero() {
             return (
               <div className={styles.plus} key={i}>
                 {dot}
-                <p>{plus.title}</p>
+                <p className={styles.plus_title}>{plus.title}</p>
               </div>
             );
           })}

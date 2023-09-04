@@ -208,7 +208,7 @@
 }
 .open_desc {
   color: var(--Black, #292929);
-  /* Subtitle/Medium */
+
   font-family: var(--interface-medium);
   font-size: 24px;
   font-style: normal;

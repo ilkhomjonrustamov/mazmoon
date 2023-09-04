@@ -34,8 +34,8 @@ export default function Workers() {
               />
             </div>
             <div className={styles.worker_info}>
-              <p className={styles.name}>Jamshid</p>
-              <p className={styles.position}>Loyiha menejeri</p>
+              <p className={styles.name}>Baxtjon</p>
+              <p className={styles.position}>Maxsulot dizayner</p>
             </div>
           </div>
           <div className={styles.worker}>
@@ -49,8 +49,8 @@ export default function Workers() {
               />
             </div>
             <div className={styles.worker_info}>
-              <p className={styles.name}>Jamshid</p>
-              <p className={styles.position}>Loyiha menejeri</p>
+              <p className={styles.name}>Abdulloh</p>
+              <p className={styles.position}>UX/UI dizayner</p>
             </div>
           </div>
           <div className={styles.worker}>
@@ -64,8 +64,8 @@ export default function Workers() {
               />
             </div>
             <div className={styles.worker_info}>
-              <p className={styles.name}>Jamshid</p>
-              <p className={styles.position}>Loyiha menejeri</p>
+              <p className={styles.name}>Shamsiddin</p>
+              <p className={styles.position}>UX/UI dizayner</p>
             </div>
           </div>
         </div>
@@ -80,16 +80,16 @@ export default function Workers() {
             <p className={styles.job_level}>Senior</p>
           </div>
           <div className={styles.job}>
-            <p className={styles.job_title}>Art direktor</p>
-            <p className={styles.job_level}>Senior</p>
+            <p className={styles.job_title}>Web dizayner</p>
+            <p className={styles.job_level}>Amaliyot</p>
+          </div>
+          <div className={styles.job}>
+            <p className={styles.job_title}>Illustration</p>
+            <p className={styles.job_level}>Junior</p>
           </div>
           <div className={styles.job}>
             <p className={styles.job_title}>Art direktor</p>
-            <p className={styles.job_level}>Senior</p>
-          </div>
-          <div className={styles.job}>
-            <p className={styles.job_title}>Art direktor</p>
-            <p className={styles.job_level}>Senior</p>
+            <p className={styles.job_level}>Midlle</p>
           </div>
         </div>
       </div>

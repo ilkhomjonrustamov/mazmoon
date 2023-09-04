@@ -23,25 +23,27 @@ export default function Modal() {
     {
       title: "Lending sayt",
     },
+    { title: "Internet do’kon" },
+    { title: "Web sayt" },
   ];
   const project_price = [
     {
       title: "4000000 sum",
     },
     {
-      title: "40020000 sum",
+      title: "12 000 000 sum",
     },
     {
-      title: "2000000 sum",
+      title: "18 000 000 sum",
     },
     {
-      title: "3000000 sum",
+      title: "20 000 000 sum",
     },
     {
-      title: "11000000 sum",
+      title: "26 000 000 sum",
     },
     {
-      title: "40000000 sum",
+      title: "Kelishamiz",
     },
   ];
   useEffect(() => {
@@ -197,11 +199,3 @@ export default function Modal() {
     </div>
   );
 }
-// const test = [{id:1, title: 'web sayt', name: 'web-sayt'}]
-//   test.map(t => {
-//     <button className={name == t.name = active : ''} onclick={() => {
-//       let aray = []
-//       aray.push(t.name)
-//       setarayy(aray)
-//     }}>{t.title}</button>
-//   })
