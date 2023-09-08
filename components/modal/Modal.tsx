@@ -166,7 +166,9 @@ export default function Modal() {
                   onChange={(e) => setEmail(email)}
                 /> */}
                 <div className={styles.number}>
-                  <span>+998</span>
+                  <span className={`${number.length > 0 ? styles.black : ""}`}>
+                    +998
+                  </span>
                   <IMaskInput
                     mask={"(00) 000 00 00"}
                     className={styles.store_input}

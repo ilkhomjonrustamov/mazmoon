@@ -14,6 +14,16 @@
   column-gap: 16px;
 }
 
+@media (max-width: 1440px) {
+  .box {
+    margin-top: 70px;
+    padding-top: 64px;
+    gap: 40px;
+  }
+  .projects {
+    gap: 16px;
+  }
+}
 @media (max-width: 1020px) {
   .projects {
     display: grid;

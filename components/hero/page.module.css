@@ -19,7 +19,6 @@
 }
 .hero_title span {
   color: var(--grey-24, #c2c2c3);
-  padding-left: 8px;
 }
 
 .plusses {
@@ -63,6 +62,7 @@
   align-items: flex-start;
   flex-direction: column;
   border-radius: 24px;
+  gap: 8px;
   background: var(--apple-grey, #f5f5f7);
 }
 .dids_title {
@@ -85,17 +85,40 @@
   font-weight: 500;
   line-height: 150%;
 }
+@media (max-width: 1440px) {
+  .hero_title {
+    font-size: 64px;
+    line-height: 120%;
+  }
+  .plus_title {
+    font-family: var(--interface-semibold);
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .dids_title {
+    font-family: var(--interface-bold);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 38.4px */
+  }
+  .dids_desc {
+    font-family: var(--interface-medium);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+  }
+}
 @media (max-width: 1300px) {
   .hero_title {
     font-size: 60px;
     line-height: 120%;
   }
   .plus_title {
-    color: var(--grey-64, #5d5d5f);
     font-family: var(--interface);
     font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 140%;
   }
 }

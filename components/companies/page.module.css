@@ -58,7 +58,7 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 350px) {
   .companies {
     display: grid;
     grid-template-columns: repeat(1, 1fr);

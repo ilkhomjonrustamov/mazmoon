@@ -155,16 +155,16 @@ const CommentOpen = ({
   Descs: string;
   Positions: string;
 }) => {
-  // useEffect(() => {
-  //   window.addEventListener("click", (e) => {
-  //     const target = e.target as Element;
-  //     if (target?.className === styles.modal) {
-  //       setOpenComment(false);
-  //     } else if (target?.className === styles.modal_inner) {
-  //       setOpenComment(true);
-  //     }
-  //   });
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("click", (e) => {
+      const target = e.target as Element;
+      if (target?.className === styles.modal) {
+        setOpenComment(false);
+      } else if (target?.className === styles.modal_inner) {
+        setOpenComment(true);
+      }
+    });
+  }, []);
   return (
     <section className={styles.modal}>
       <div className={styles.modal_inner}>

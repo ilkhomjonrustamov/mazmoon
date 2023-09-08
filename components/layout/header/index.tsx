@@ -16,7 +16,7 @@ export default function Header() {
             alt="Company Logo"
             width={80}
             height={60}
-            className=""
+            className={styles.logo}
           />
         </div>
         <div className={styles.right}>
@@ -29,7 +29,6 @@ export default function Header() {
             mazmoongr@gmail.com
           </a>
           <Link href="/" className={styles.telegram}>
-            {" "}
             Написать в телеграм
           </Link>
 
@@ -41,12 +40,3 @@ export default function Header() {
     </header>
   );
 }
-
-// const test = [{id:1, title: 'web sayt', name: 'web-sayt'}]
-//   test.map(t => {
-//     <button className={name == t.name = active : ''} onclick={() => {
-//       let aray = []
-//       aray.push(t.name)
-//       setarayy(aray)
-//     }}>{t.title}</button>
-//   })

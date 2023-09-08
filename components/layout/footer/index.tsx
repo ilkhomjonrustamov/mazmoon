@@ -59,7 +59,7 @@ export default function Footer() {
         <div className={styles.right}>
           <a
             className={styles.social}
-            href="https://www.youtube.com"
+            href="https://instagram.com/mazmoon_group?igshid=NjIwNzIyMDk2Mg=="
             target={"_blank"}
             rel="noreferrer"
           >

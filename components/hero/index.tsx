@@ -6,10 +6,10 @@ export default function Hero() {
       title: "UX/UI dizayni",
     },
     {
-      title: "Tadqiqot",
+      title: "Dizaynni qo'llab-quvvatlash",
     },
     {
-      title: "Dizaynni qo'llab-quvvatlash",
+      title: "Tadqiqot",
     },
     {
       title: "Autstaffing",
@@ -21,10 +21,10 @@ export default function Hero() {
   return (
     <section className={`box ${styles.hero} section`}>
       <div className={styles.left}>
-        <p className={styles.hero_title}>
-          Millionlab insonlar
+        <div className={styles.hero_title}>
+          <p> Millionlab insonlar</p>
           <span>uchun raqamli mahsulotlarni loyihalashtiramiz</span>
-        </p>
+        </div>
         <div className={styles.plusses}>
           {plusses.map((plus, i) => {
             return (

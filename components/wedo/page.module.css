@@ -98,6 +98,19 @@
   font-weight: 400;
   line-height: 150%;
 }
+@media (max-width: 1440px) {
+  .box {
+    gap: 90px;
+  }
+  .desc {
+    font-size: 18px;
+    line-height: 150%;
+  }
+  .title {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
 @media (max-width: 1300px) {
   .box {
     gap: 24px;
@@ -123,6 +136,8 @@
   }
   .img_info {
     padding: 14px 24px 14px 16px;
+    bottom: 16px;
+    left: 16px;
   }
   .name {
     font-size: 16px;

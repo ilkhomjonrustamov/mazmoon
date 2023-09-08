@@ -213,7 +213,42 @@
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  line-height: 140%; /* 33.6px */
+  line-height: 140%;
+}
+@media (max-width: 1440px) {
+  .modal_inner {
+    max-width: 1136px;
+  }
+  .video {
+    max-width: 272px;
+    height: 399px;
+  }
+  .video_info_name {
+    font-size: 16px;
+    line-height: 150%;
+  }
+  .video_info_position {
+    font-size: 14px;
+    line-height: 140%;
+  }
+  .comment {
+    padding: 32px;
+  }
+  .feedback_desc {
+    gap: 24px;
+  }
+  .desc {
+    font-size: 24px;
+    line-height: 140%;
+  }
+  .read_more {
+    font-size: 16px;
+    line-height: 150%;
+  }
+  .open_desc {
+    font-size: 20px;
+    line-height: 150%;
+  }
 }
 @media (max-width: 1200px) {
   .navigation {
