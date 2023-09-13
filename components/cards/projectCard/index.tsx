@@ -1,25 +1,76 @@
+import Link from "next/link";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 interface IProject {
   title: string;
   image: string;
+  link: string | null;
 }
 export default function ProjectCard({ project }: { project: IProject }) {
-  return (
-    <div className={styles.card}>
-      <div className={styles.image_box}>
-        <Image
-          src={project.image}
-          width={612}
-          alt="project image"
-          height={458}
-          className={styles.img}
-        />
+  if (project.link != null) {
+    return (
+      <Link className={styles.card} href={project.link}>
+        <div className={styles.image_box}>
+          <Image
+            src={project.image}
+            width={612}
+            alt="project image"
+            height={458}
+            className={styles.img}
+          />
+        </div>
+        <div className={styles.card_title_box}>
+          <p>{project.title}</p>
+        </div>
+
+        <div className={styles.hover_image}>
+          <Image
+            src={"/media/project1.png"}
+            width={100}
+            height={100}
+            className="image"
+            alt="image hover"
+          />
+        </div>
+      </Link>
+    );
+  } else {
+    return (
+      <div className={styles.card}>
+        <div className={styles.image_box}>
+          <Image
+            src={project.image}
+            width={612}
+            alt="project image"
+            height={458}
+            className={styles.img}
+          />
+        </div>
+        <div className={styles.card_title_box}>
+          <p>{project.title}</p>
+        </div>
+
+        <div className={styles.hover_image}>
+          <Image
+            src={"/media/project1.png"}
+            width={100}
+            height={100}
+            className="image"
+            alt="image hover"
+          />
+        </div>
+
+        <div className={styles.hover_image}>
+          <Image
+            src={"/public/media/comment1.png"}
+            width={100}
+            height={100}
+            className={`image ${styles.img}`}
+            alt="image hover"
+          />
+        </div>
       </div>
-      <div className={styles.card_title_box}>
-        <p>{project.title}</p>
-      </div>
-    </div>
-  );
+    );
+  }
 }

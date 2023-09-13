@@ -3,6 +3,7 @@
   width: 100%;
   background: white;
   z-index: 100;
+  transition: 0.4s;
 }
 .container {
   padding: 32px 0;

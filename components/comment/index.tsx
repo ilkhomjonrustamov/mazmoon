@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
-import { arrow_right, close2 } from "@/public/icons";
+import { arrow_right, close2, playbtn } from "@/public/icons";
 import styles from "./page.module.css";
 import Image from "next/image";
 interface Comment {
@@ -22,24 +22,13 @@ export default function Comments() {
   const [img, setImg] = useState("");
   const [desc, setDesc] = useState("");
   const [position, setPosition] = useState("");
+  const vid = useRef<any>();
+  const [playBtn, setPlayBtn] = useState(true);
+
   const comments = [
-    {
-      video: "/media/brain.mp4",
-      name: "Maftunaxon Xabibullayeva",
-      position: "CEO-Safar-park",
-      img: "/media/comment1.png",
-      desc: "Работаем с ребятами уже 2 года с момента старта нашего маркетпелейса. У ребят из Crauch помимо хорошего дизайна, развит продуктовый подход и исследование. Что нам сильно помогло на этапе MVP и тестировния UX-гипотез. Более того, это позволило частично зааутсорсить эту функцию и высвободило у нас время на другие задачи. Работаем с ребятами уже 2 года с момента старта нашего маркетпелейса. У ребят из Crauch помимо хорошего дизайна, развит продуктовый подход и исследование. Что нам сильно помогло на этапе MVP и тестировния UX-гипотез. Более того, это позволило частично зааутсорсить эту функцию и высвободило у нас время на другие задачи.Работаем с ребятами уже 2 года с момента старта нашего маркетпелейса. У ребят из Crauch помимо хорошего дизайна, развит продуктовый подход и исследование. Что нам сильно помогло на этапе MVP и тестировния UX-гипотез. Более того, это позволило частично зааутсорсить эту функцию и высвободило у нас время на другие задачи.",
-    },
     {
       video: "/media/commentvideo.mp4",
       name: "Maftunaxon ",
-      position: "CEO-Safar-park",
-      img: "/media/worker1.png",
-      desc: "Работаем с ребятами уже 2 года с момента старта нашего маркетпелейса. У ребят из Crauch помимо хорошего дизайна, развит продуктовый подход и исследование. Что нам сильно помогло на этапе MVP и тестировния UX-гипотез. Более того, это позволило частично зааутсорсить эту функцию и высвободило у нас время на другие задачи. Работаем с ребятами уже 2 года с момента старта нашего маркетпелейса. У ребят из Crauch помимо хорошего дизайна, развит продуктовый подход и исследование. Что нам сильно помогло на этапе MVP и тестировния UX-гипотез. Более того, это позволило частично зааутсорсить эту функцию и высвободило у нас время на другие задачи.Работаем с ребятами уже 2 года с момента старта нашего маркетпелейса. У ребят из Crauch помимо хорошего дизайна, развит продуктовый подход и исследование. Что нам сильно помогло на этапе MVP и тестировния UX-гипотез. Более того, это позволило частично зааутсорсить эту функцию и высвободило у нас время на другие задачи.",
-    },
-    {
-      video: "/media/brain.mp4",
-      name: "Maftunaxon Xabibullayeva",
       position: "CEO-Safar-park",
       img: "/media/comment1.png",
       desc: "Работаем с ребятами уже 2 года с момента старта нашего маркетпелейса. У ребят из Crauch помимо хорошего дизайна, развит продуктовый подход и исследование. Что нам сильно помогло на этапе MVP и тестировния UX-гипотез. Более того, это позволило частично зааутсорсить эту функцию и высвободило у нас время на другие задачи. Работаем с ребятами уже 2 года с момента старта нашего маркетпелейса. У ребят из Crauch помимо хорошего дизайна, развит продуктовый подход и исследование. Что нам сильно помогло на этапе MVP и тестировния UX-гипотез. Более того, это позволило частично зааутсорсить эту функцию и высвободило у нас время на другие задачи.Работаем с ребятами уже 2 года с момента старта нашего маркетпелейса. У ребят из Crauch помимо хорошего дизайна, развит продуктовый подход и исследование. Что нам сильно помогло на этапе MVP и тестировния UX-гипотез. Более того, это позволило частично зааутсорсить эту функцию и высвободило у нас время на другие задачи.",
@@ -72,17 +61,44 @@ export default function Comments() {
           modules={[Navigation]}
           className="mySwiper"
           loop
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
         >
           {comments.map((data, key) => {
             return (
               <SwiperSlide className={styles.feedback} key={key}>
                 <div className={styles.video}>
-                  <video src={data.video} controls autoPlay muted></video>
+                  <video
+                    src={data.video}
+                    className={styles.videos}
+                    ref={vid}
+                  ></video>
                   <div className={styles.video_info}>
                     <p className={styles.video_info_name}>{data.name}</p>
                     <p className={styles.video_info_position}>
                       {data.position}
                     </p>
+                  </div>
+                  <div
+                    className={styles.play}
+                    onClick={() => {
+                      if (playBtn) {
+                        vid.current.play();
+                        setPlayBtn(false);
+                      } else {
+                        vid.current.pause();
+                        setPlayBtn(true);
+                      }
+                    }}
+                  >
+                    {playBtn ? (
+                      <div className={styles.playbtn}>{playbtn}</div>
+                    ) : (
+                      <div className={styles.playbtn}>{close2}</div>
+                    )}
+                    <p className={styles.play_title}>Videoni ko’rish</p>
                   </div>
                 </div>
                 <div className={styles.comment}>

@@ -82,10 +82,16 @@
   align-items: flex-start;
   gap: 57px;
   max-width: 320px;
-  width: 100%;  
+  width: 100%;
 }
 .job_title {
+  color: var(--Black, #292929);
+
+  /* Title 2/Regular */
+  font-family: var(--interface);
   font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 150%;
 }
 .job_level {

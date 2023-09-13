@@ -2,13 +2,32 @@ import { feather } from "@/public/icons";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { ModalContext } from "@/store/modal";
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import Link from "next/link";
 export default function Header() {
   const { setVariant, setIsModal, isModal } = useContext(ModalContext);
 
+  const header = useRef<any>();
+  let lastScrollTop = 0;
+  const headerShowhide = () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      header.current.style.top = "-124px";
+    } else {
+      header.current.style.top = "0";
+    }
+    lastScrollTop = scrollTop;
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", headerShowhide);
+    return () => {
+      window.removeEventListener("scroll", headerShowhide);
+    };
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header ref={header} className={styles.header}>
       <div className={styles.container}>
         <div className={styles.image_div}>
           <Image

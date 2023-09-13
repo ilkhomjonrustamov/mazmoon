@@ -7,13 +7,13 @@ export default function Footer() {
   return (
     <section className={`box section ${styles.section}`}>
       <div className={styles.contact}>
-        <p className={styles.contact_title}>
-          Keling, sizga qanday yordam berishimizni ko&apos;rib chiqamiz!
+        <div className={styles.contact_title}>
+          <p> Keling, sizga qanday yordam berishimizni ko&apos;rib chiqamiz!</p>
           <span>
-            va shu bo&aposyicha suhbatlashib narximizni va shartlarimizni
+            va shu bo&apos;yicha suhbatlashib narximizni va shartlarimizni
             tushuntirib beramiz
           </span>
-        </p>
+        </div>
         <div className={styles.btn_box}>
           <button
             className={styles.contact_btn}

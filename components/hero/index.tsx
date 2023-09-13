@@ -21,10 +21,11 @@ export default function Hero() {
   return (
     <section className={`box ${styles.hero} section`}>
       <div className={styles.left}>
-        <div className={styles.hero_title}>
-          <p> Millionlab insonlar</p>
-          <span>uchun raqamli mahsulotlarni loyihalashtiramiz</span>
-        </div>
+        <p className={styles.hero_title}>
+          Millionlab insonlar
+          <span> uchun raqamli </span>
+          <span>mahsulotlarni loyihalashtiramiz</span>
+        </p>
         <div className={styles.plusses}>
           {plusses.map((plus, i) => {
             return (

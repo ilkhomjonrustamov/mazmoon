@@ -11,12 +11,14 @@ import Workers from "@/components/workers";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import Layout from "@/components/layout/layout";
+import { CustomHead } from "@/components/layout/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
+      <CustomHead title={`Mazmoon Group`} desc={""} canonical={"/"} />
       <Layout>
         <Hero />
         <Project />

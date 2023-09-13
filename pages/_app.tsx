@@ -1,5 +1,5 @@
 import ModalContextProvider from "@/store/modal";
-import "@/styles/globals.css";
+import "@/styles/main.css";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";

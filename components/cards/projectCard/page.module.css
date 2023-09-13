@@ -44,6 +44,17 @@
 .card:nth-child(3n) {
   grid-column: 1 / 3;
 }
+.card:hover .hover_image {
+  display: flex;
+}
+.hover_image {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
 @media (max-width: 1440px) {
   .card {
     border-radius: 32px;

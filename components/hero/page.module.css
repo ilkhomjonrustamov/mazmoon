@@ -19,6 +19,7 @@
 }
 .hero_title span {
   color: var(--grey-24, #c2c2c3);
+  padding-left: 8px;
 }
 
 .plusses {
@@ -33,9 +34,13 @@
   justify-content: center;
   gap: 16px;
 }
+
 .plus:nth-child(1) .plus p {
   background-color: red;
   color: wheat;
+}
+.plus:nth-child(1) svg {
+  display: none;
 }
 .plus_title {
   color: var(--grey-64, #5d5d5f);
@@ -150,6 +155,9 @@
   .dids_title {
     font-size: 24px;
     line-height: 140%; /* 33.6px */
+  }
+  .hero_title span {
+    padding-left: unset;
   }
 }
 @media (max-width: 550px) {
