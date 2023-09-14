@@ -38,7 +38,7 @@ export default function Comments() {
     <section className="section box">
       <div className={styles.navigation}>
         <p className={`section_title ${styles.section_title}`}>
-          Biz eng zo’rimiz <span>faqat mijozlarimiz uchun</span>
+          Biz eng zo’rimiz <span> faqat mijozlarimiz uchun</span>
         </p>
         <div className={styles.btns}>
           <button

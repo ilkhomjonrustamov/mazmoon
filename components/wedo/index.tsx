@@ -39,7 +39,7 @@ export default function Wedo() {
       >
         <div className={styles.info}>
           <p className="section_title">
-            Zamonaviy raqamli <span>yechimlarni yaratamiz</span>
+            Zamonaviy raqamli <span> yechimlarni yaratamiz</span>
           </p>
           <div className={styles.desc}>
             <p>

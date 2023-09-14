@@ -10,52 +10,55 @@ export default function Project() {
     },
     {
       image: "/media/projects/project2.png",
-      title: "2clicks - mobil ilova uchun ishlangan web sayt dizayni",
+      title: "Magnet - onlayn bozor uchun ishlangan mobile ilova",
       link: "https://github.com/",
     },
     {
       image: "/media/projects/project3.png",
-      title: "2clicks - mobil ilova uchun ishlangan web sayt dizayni",
+      title: "2clicks - Qarz oldi berish uchun ishlangan web sayt",
       link: "https://github.com/",
     },
     {
       image: "/media/projects/project4.png",
-      title: "Home24 - Online elektron do’kon uchun chizilgan web dizayn",
+      title: "Home24 - Online elektron do’kon uchun chizilgan web sayt",
       link: "https://github.com/",
     },
     {
       image: "/media/projects/project5.png",
-      title: "Cavsar tour - turistik agentligi uchun web sayt dizayni",
+      title: "Cavsar tour - turistik agentligi uchun chizilgan web sayt",
       link: "https://github.com/",
     },
     {
       image: "/media/projects/project6.png",
-      title: "Ar-global - Logistika uchun ishlangan web sayt dizayni",
+      title: "Ar-global - Logistika uchun ishlangan web sayt",
       link: "https://github.com/",
     },
     {
       image: "/media/projects/project7.png",
-      title: "Brand Jobs- uchun ishlangan mobil ilova dizayni",
+      title: "Brand Jobs - bo’sh ishga ta’minlash uchun chizilgan mobil ilova",
       link: "https://github.com/",
     },
     {
       image: "/media/projects/project8.png",
-      title: "Home24 - Online elektron do’kon uchun chizilgan web dizayn",
+      title:
+        "Jahon invest plast - plastik, quvr va yoqilg’i quyish shahobchasi uchun chizilgan web sayt",
       link: "https://github.com/",
     },
     {
       image: "/media/projects/project11.png",
-      title: "Hirelancer - frilanserlar uchun ishlangan web sayt dizayni",
+      title: "Hirelancer - frilanserlar uchun chizilgan web sayt",
       link: null,
     },
     {
       image: "/media/projects/project9.png",
-      title: "2clicks - mobil ilova uchun ishlangan web sayt dizayni",
+      title:
+        "Libos - Ayol va qizlar uchun online kiyim do’kon uchun chizilgan web sayt",
       link: null,
     },
     {
       image: "/media/projects/project10.png",
-      title: "Rehau Asia - oyna romlar ishlab chuqaruvga oid web sayt ",
+      title:
+        "Polimer group asia - quvir ishlab chiqarish uchun chizilgan web sayt",
       link: null,
     },
   ];

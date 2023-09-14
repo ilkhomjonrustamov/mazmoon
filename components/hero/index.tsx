@@ -25,8 +25,8 @@ export default function Hero() {
       <div className={styles.left}>
         <p className={styles.hero_title}>
           Millionlab insonlar
-          <span className=""> uchun raqamli </span>
-          <span>mahsulotlarni loyihalashtiramiz</span>
+          <span> uchun raqamli </span>
+          <span> mahsulotlarni loyihalashtiramiz</span>
         </p>
         <div className={styles.plusses}>
           {plusses.map((plus, i) => {

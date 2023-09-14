@@ -19,7 +19,6 @@
 }
 .hero_title span {
   color: var(--grey-24, #c2c2c3);
-  padding-left: 8px;
 }
 .plusses {
   display: flex;
@@ -151,9 +150,6 @@
   .dids_title {
     font-size: 24px;
     line-height: 140%;
-  }
-  .hero_title span {
-    padding-left: unset;
   }
 }
 @media (max-width: 550px) {

@@ -80,7 +80,6 @@ a {
 }
 .section_title span {
   color: var(--grey-24, #c2c2c3);
-  padding-left: 8px;
 }
 .image {
   width: 100%;

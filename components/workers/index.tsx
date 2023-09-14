@@ -46,7 +46,7 @@ export default function Workers() {
     <section className={`box section ${styles.box}`}>
       <div className={styles.top_workers}>
         <p className={`section_title ${styles.section_title}`}>
-          Qobilyatli jaydari <span>ishchilarimiz</span>
+          Qobilyatli jaydari <span> ishchilarimiz</span>
         </p>
         <div className={styles.workers}>
           {workers.map((worker, id) => {

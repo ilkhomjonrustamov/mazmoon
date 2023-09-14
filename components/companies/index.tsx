@@ -24,7 +24,7 @@ export default function Companies() {
     <section className={`box section`}>
       <p className={`section_title ${styles.section_title}`}>
         Biz korporatsiyalar bilan
-        <span>qanday ishlashni bilamiz</span>
+        <span> qanday ishlashni bilamiz</span>
       </p>
       <div className={styles.companies}>
         {companies.map((img, id) => {
