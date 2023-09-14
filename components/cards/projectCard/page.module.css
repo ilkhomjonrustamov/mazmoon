@@ -10,8 +10,6 @@
 }
 .card_title_box {
   color: var(--white, #fff);
-
-  /* Title 1/Semibold */
   font-family: var(--interface-semibold);
   font-size: 20px;
   font-style: normal;
@@ -46,6 +44,7 @@
 }
 .card:hover .hover_image {
   display: flex;
+  transition: 0.5s;
 }
 .hover_image {
   display: none;
@@ -58,6 +57,7 @@
   left: 0;
   background: rgba(41, 41, 41, 0.4);
   border-radius: 40px;
+  transition: 0.5s;
 }
 .inner_hover_btn {
   color: var(--Black, #292929);
@@ -77,13 +77,17 @@
   border: unset;
 }
 .inner_hover_btn.svg {
-  padding: 19px 22px;
+  padding: 12px;
   border-radius: 50px;
   background: var(--White, #fff);
 }
 .inner_hover_btn svg {
-  width: 13px;
-  height: 18px;
+  width: 32px;
+  height: 32px;
+}
+.inner_hover_btn svg path {
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 1440px) {
   .card,

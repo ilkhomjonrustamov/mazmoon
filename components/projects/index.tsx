@@ -74,7 +74,7 @@ export default function Project() {
               variants={{
                 hide: {
                   opacity: 0,
-                  x: 100,
+                  x: 50,
                 },
                 show: {
                   opacity: 1,

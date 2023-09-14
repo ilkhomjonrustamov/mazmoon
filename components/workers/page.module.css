@@ -45,22 +45,21 @@
 .name {
   color: var(--black, #292929);
   text-align: center;
-  /* Subtitle/Semibold */
+
   font-family: var(--interface-semibold);
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 140%; /* 33.6px */
+  line-height: 140%;
 }
 .position {
   color: var(--grey-40, #9a999b);
 
-  /* Body 1/Regular */
   font-family: var(--interface);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
 }
 .bottom_workers {
   display: flex;
@@ -90,7 +89,6 @@
 .job_title {
   color: var(--Black, #292929);
 
-  /* Title 2/Regular */
   font-family: var(--interface);
   font-size: 18px;
   font-style: normal;
@@ -100,12 +98,11 @@
 .job_level {
   color: var(--black, #292929);
 
-  /* Subtitle/Medium */
   font-family: var(--interface-medium);
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  line-height: 140%; /* 33.6px */
+  line-height: 140%;
 }
 @media (max-width: 1440px) {
   .section_title {
@@ -131,12 +128,12 @@
   }
   .job_title {
     color: var(--Black, #292929);
-    /* Body 1/Regular */
-    font-family: TT Interfaces;
+
+    font-family: var(--interface);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 24px */
+    line-height: 150%;
   }
   .job_level {
     font-size: 20px;
@@ -151,16 +148,16 @@
 }
 @media (max-width: 1020px) {
   .worker_imgs {
-    max-width: 160px;
-    max-height: 160px;
+    max-width: 155px;
+    max-height: 155px;
   }
   .name {
     font-size: 20px;
-    line-height: 150%; /* 30px */
+    line-height: 150%;
   }
   .position {
     font-size: 14px;
-    line-height: 140%; /* 19.6px */
+    line-height: 140%;
   }
 
   .workers,
@@ -172,14 +169,14 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 140%; /* 19.6px */
+    line-height: 140%;
   }
   .job_level {
     font-family: var(--interface-medium);
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 30px */
+    line-height: 150%;
   }
   .worker {
     gap: 16px;
@@ -206,5 +203,11 @@
     column-gap: 10px;
     row-gap: 32px;
     place-items: center;
+  }
+  .jobs {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
   }
 }

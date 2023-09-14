@@ -57,7 +57,7 @@ export default function Workers() {
                 variants={{
                   hide: {
                     opacity: 0,
-                    x: -100,
+                    x: -50,
                   },
                   show: {
                     opacity: 1,
@@ -104,7 +104,7 @@ export default function Workers() {
                 variants={{
                   hide: {
                     opacity: 0,
-                    x: -100,
+                    x: -50,
                   },
                   show: {
                     opacity: 1,
