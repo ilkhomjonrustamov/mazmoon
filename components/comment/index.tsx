@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
-import { arrow_right, close2, playbtn } from "@/public/icons";
+import { arrow_right, close2, pause, playbtn } from "@/public/icons";
 import styles from "./page.module.css";
 import Image from "next/image";
 interface Comment {
@@ -31,7 +31,7 @@ export default function Comments() {
       name: "Maftunaxon ",
       position: "CEO-Safar-park",
       img: "/media/comment1.png",
-      desc: "Работаем с ребятами уже 2 года с момента старта нашего маркетпелейса. У ребят из Crauch помимо хорошего дизайна, развит продуктовый подход и исследование. Что нам сильно помогло на этапе MVP и тестировния UX-гипотез. Более того, это позволило частично зааутсорсить эту функцию и высвободило у нас время на другие задачи. Работаем с ребятами уже 2 года с момента старта нашего маркетпелейса. У ребят из Crauch помимо хорошего дизайна, развит продуктовый подход и исследование. Что нам сильно помогло на этапе MVP и тестировния UX-гипотез. Более того, это позволило частично зааутсорсить эту функцию и высвободило у нас время на другие задачи.Работаем с ребятами уже 2 года с момента старта нашего маркетпелейса. У ребят из Crauch помимо хорошего дизайна, развит продуктовый подход и исследование. Что нам сильно помогло на этапе MVP и тестировния UX-гипотез. Более того, это позволило частично зааутсорсить эту функцию и высвободило у нас время на другие задачи.",
+      desc: "Bozorimiz ishga tushganidan beri biz yigitlar bilan 2 yildan beri ishlaymiz. Mazmoon yigitlari, yaxshi dizayndan tashqari, ishlab chiqilgan mahsulot yondashuvi va tadqiqotlariga ega. Bu MVP bosqichida va UX gipotezalarini sinab ko'rishda bizga ko'p yordam berdi. Bundan tashqari, bu bizga ushbu funktsiyani qisman autsorsing qilish imkonini berdi va boshqa vazifalar uchun vaqtimizni bo'shatdi. Bozorimiz ishga tushganidan beri biz yigitlar bilan 2 yildan beri ishlaymiz. Mazmoon yigitlari, yaxshi dizayndan tashqari, ishlab chiqilgan mahsulot yondashuvi va tadqiqotlariga ega. Bu MVP bosqichida va UX gipotezalarini sinab ko'rishda bizga ko'p yordam berdi. Bundan tashqari, bu bizga ushbu funktsiyani qisman autsorsing qilish imkonini berdi va vaqtimizni boshqa ishlarga bo'shatdi.Biz o'z bozorimizni ishga tushirganimizdan beri yigitlar bilan 2 yildan beri ishlaymiz. Mazmoon yigitlari, yaxshi dizayndan tashqari, ishlab chiqilgan mahsulot yondashuvi va tadqiqotlariga ega. Bu MVP bosqichida va UX gipotezalarini sinab ko'rishda bizga ko'p yordam berdi. Bundan tashqari, bu bizga ushbu funktsiyani qisman autsorsing qilish imkonini berdi va boshqa vazifalar uchun vaqtimizni bo'shatdi.",
     },
   ];
   return (
@@ -96,7 +96,7 @@ export default function Comments() {
                     {playBtn ? (
                       <div className={styles.playbtn}>{playbtn}</div>
                     ) : (
-                      <div className={styles.playbtn}>{close2}</div>
+                      <div className={styles.playbtn}>{pause}</div>
                     )}
                     <p className={styles.play_title}>Videoni ko’rish</p>
                   </div>

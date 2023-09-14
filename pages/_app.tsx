@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import NProgress from "nprogress";
 import Router from "next/router";
+import FormContextProvider from "../store/form";
 export default function App({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient();
 
@@ -19,8 +20,12 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <ModalContextProvider>
-      <Component {...pageProps} />
-    </ModalContextProvider>
+    <QueryClientProvider client={queryClient}>
+      <FormContextProvider>
+        <ModalContextProvider>
+          <Component {...pageProps} />
+        </ModalContextProvider>
+      </FormContextProvider>
+    </QueryClientProvider>
   );
 }

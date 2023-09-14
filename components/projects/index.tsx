@@ -1,5 +1,6 @@
 import ProjectCard from "../cards/projectCard";
 import styles from "./page.module.css";
+import { Variants, motion } from "framer-motion";
 export default function Project() {
   const projects = [
     {
@@ -63,7 +64,31 @@ export default function Project() {
       <p className="section_title">Loyihalarimiz</p>
       <div className={styles.projects}>
         {projects.map((project, id) => {
-          return <ProjectCard project={project} key={id} />;
+          return (
+            <motion.div
+              initial="hide"
+              whileInView="show"
+              variants={{
+                hide: {
+                  opacity: 0,
+                  x: 100,
+                },
+                show: {
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    delay: id * 0.2,
+                    duration: 0.75,
+                  },
+                },
+              }}
+              viewport={{ once: true, amount: 0.8 }}
+              className={styles.card}
+              key={id}
+            >
+              <ProjectCard project={project} key={id} />
+            </motion.div>
+          );
         })}
       </div>
     </section>

@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/effect-fade";
 
 import { EffectFade, Autoplay } from "swiper/modules";
 import styles from "./page.module.css";
@@ -28,7 +29,7 @@ export default function Companies() {
       <div className={styles.companies}>
         {companies.map((img, id) => {
           return (
-            <div className={styles.company} key={id}>
+            <div className={styles.company_inner} key={id}>
               <Swiper
                 loop
                 autoplay={{
@@ -37,14 +38,17 @@ export default function Companies() {
                 }}
                 effect={"fade"}
                 modules={[EffectFade, Autoplay]}
-                className={styles.img_boxs}
                 slidesPerView={1}
                 spaceBetween={8}
+                className={styles.company_inner_swiper}
               >
-                {img.map((img, id) => {
+                {img.map((img, idx) => {
                   return (
-                    <SwiperSlide key={id} style={{ width: "100%" }}>
-                      <div className={styles.img_box}>
+                    <SwiperSlide
+                      key={idx}
+                      className={styles.company_inner_swiper_slide}
+                    >
+                      <div className={styles.company_img_box}>
                         <Image
                           src={img.img}
                           alt="company logo"
@@ -52,14 +56,12 @@ export default function Companies() {
                           height={52}
                           className={styles.img}
                         />
-                        <p className={styles.id}>
-                          {id < 9 ? `0${id + 1}` : id + 1}
-                        </p>
                       </div>
                     </SwiperSlide>
                   );
                 })}
               </Swiper>
+              <p className={styles.id}>{id < 9 ? `0${id + 1}` : id + 1}</p>
             </div>
           );
         })}

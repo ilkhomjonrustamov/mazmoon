@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { arrow_right_project } from "@/public/icons";
 
 interface IProject {
   title: string;
@@ -25,13 +26,9 @@ export default function ProjectCard({ project }: { project: IProject }) {
         </div>
 
         <div className={styles.hover_image}>
-          <Image
-            src={"/media/project1.png"}
-            width={100}
-            height={100}
-            className="image"
-            alt="image hover"
-          />
+          <button className={`${styles.inner_hover_btn} ${styles.svg}`}>
+            {arrow_right_project}
+          </button>
         </div>
       </Link>
     );
@@ -52,23 +49,7 @@ export default function ProjectCard({ project }: { project: IProject }) {
         </div>
 
         <div className={styles.hover_image}>
-          <Image
-            src={"/media/project1.png"}
-            width={100}
-            height={100}
-            className="image"
-            alt="image hover"
-          />
-        </div>
-
-        <div className={styles.hover_image}>
-          <Image
-            src={"/public/media/comment1.png"}
-            width={100}
-            height={100}
-            className={`image ${styles.img}`}
-            alt="image hover"
-          />
+          <button className={styles.inner_hover_btn}>Tez kunda</button>
         </div>
       </div>
     );

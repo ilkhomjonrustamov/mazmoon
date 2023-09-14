@@ -1,6 +1,47 @@
+import { motion } from "framer-motion";
 import styles from "./page.module.css";
 import Image from "next/image";
 export default function Workers() {
+  const workers = [
+    {
+      img: "/media/worker1.png",
+      name: "Jamshid",
+      position: "Loyiha menejeri",
+    },
+    {
+      img: "/media/worker2.png",
+      name: "Baxtjon",
+      position: "Maxsulot dizayner",
+    },
+    {
+      img: "/media/worker3.png",
+      name: "Abdulloh",
+      position: "UX/UI dizayner",
+    },
+    {
+      img: "/media/worker4.png",
+      name: "Shamsiddin",
+      position: "UX/UI dizayner",
+    },
+  ];
+  const worker_need = [
+    {
+      name: "Art direktor",
+      position: "Senior",
+    },
+    {
+      name: "Web dizayner",
+      position: "Amaliyot",
+    },
+    {
+      name: "Illustration",
+      position: "Junior",
+    },
+    {
+      name: "Art direktor",
+      position: "Midlle",
+    },
+  ];
   return (
     <section className={`box section ${styles.box}`}>
       <div className={styles.top_workers}>
@@ -8,66 +49,46 @@ export default function Workers() {
           Qobilyatli jaydari <span>ishchilarimiz</span>
         </p>
         <div className={styles.workers}>
-          <div className={styles.worker}>
-            <div className={styles.worker_imgs}>
-              <Image
-                src="/media/worker1.png"
-                alt="worker"
-                className={styles.worker_img}
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className={styles.worker_info}>
-              <p className={styles.name}>Jamshid</p>
-              <p className={styles.position}>Loyiha menejeri</p>
-            </div>
-          </div>
-          <div className={styles.worker}>
-            <div className={styles.worker_imgs}>
-              <Image
-                src="/media/worker2.png"
-                alt="worker"
-                className={styles.worker_img}
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className={styles.worker_info}>
-              <p className={styles.name}>Baxtjon</p>
-              <p className={styles.position}>Maxsulot dizayner</p>
-            </div>
-          </div>
-          <div className={styles.worker}>
-            <div className={styles.worker_imgs}>
-              <Image
-                src="/media/worker3.png"
-                alt="worker"
-                className={styles.worker_img}
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className={styles.worker_info}>
-              <p className={styles.name}>Abdulloh</p>
-              <p className={styles.position}>UX/UI dizayner</p>
-            </div>
-          </div>
-          <div className={styles.worker}>
-            <div className={styles.worker_imgs}>
-              <Image
-                src="/media/worker4.png"
-                alt="worker"
-                className={styles.worker_img}
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className={styles.worker_info}>
-              <p className={styles.name}>Shamsiddin</p>
-              <p className={styles.position}>UX/UI dizayner</p>
-            </div>
-          </div>
+          {workers.map((worker, id) => {
+            return (
+              <motion.div
+                initial="hide"
+                whileInView="show"
+                variants={{
+                  hide: {
+                    opacity: 0,
+                    x: -100,
+                  },
+                  show: {
+                    opacity: 1,
+                    x: 0,
+                    transition: {
+                      delay: id * 0.2,
+                      duration: 0.75,
+                    },
+                  },
+                }}
+                viewport={{ once: true, amount: 0.8 }}
+                key={id}
+              >
+                <div className={styles.worker}>
+                  <div className={styles.worker_imgs}>
+                    <Image
+                      src={worker.img}
+                      alt="worker"
+                      className={styles.worker_img}
+                      width={300}
+                      height={300}
+                    />
+                  </div>
+                  <div className={styles.worker_info}>
+                    <p className={styles.name}>{worker.name}</p>
+                    <p className={styles.position}>{worker.position}</p>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
       <div className={styles.bottom_workers}>
@@ -75,22 +96,36 @@ export default function Workers() {
           Bizga qobilyatli jaydari <span> ishchilar kerak</span>
         </p>
         <div className={styles.jobs}>
-          <div className={styles.job}>
-            <p className={styles.job_title}>Art direktor</p>
-            <p className={styles.job_level}>Senior</p>
-          </div>
-          <div className={styles.job}>
-            <p className={styles.job_title}>Web dizayner</p>
-            <p className={styles.job_level}>Amaliyot</p>
-          </div>
-          <div className={styles.job}>
-            <p className={styles.job_title}>Illustration</p>
-            <p className={styles.job_level}>Junior</p>
-          </div>
-          <div className={styles.job}>
-            <p className={styles.job_title}>Art direktor</p>
-            <p className={styles.job_level}>Midlle</p>
-          </div>
+          {worker_need.map((worker, id) => {
+            return (
+              <motion.div
+                initial="hide"
+                whileInView="show"
+                variants={{
+                  hide: {
+                    opacity: 0,
+                    x: -100,
+                  },
+                  show: {
+                    opacity: 1,
+                    x: 0,
+                    transition: {
+                      delay: id * 0.1,
+                      duration: 0.75,
+                    },
+                  },
+                }}
+                viewport={{ once: true, amount: 0.8 }}
+                key={id}
+                className={styles.motion}
+              >
+                <div className={styles.job}>
+                  <p className={styles.job_title}>{worker.name}</p>
+                  <p className={styles.job_level}>{worker.position}</p>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

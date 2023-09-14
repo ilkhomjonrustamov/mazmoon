@@ -138,8 +138,13 @@
   font-weight: 500;
   line-height: 150%;
 }
-.number span.black {
-  color: var(--Black, #292929);
+.black {
+  color: var(--Black, #292929) !important;
+  transition: 0.1s;
+}
+.black_btm {
+  border-bottom: 1px solid var(--Black, #292929);
+  transition: 0.1s;
 }
 .number span {
   padding: 16px 0 0 4px;

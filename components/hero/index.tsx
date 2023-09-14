@@ -1,5 +1,6 @@
 import { dot } from "@/public/icons";
 import styles from "./page.module.css";
+import CountUp from "react-countup";
 export default function Hero() {
   const plusses = [
     {
@@ -18,12 +19,13 @@ export default function Hero() {
       title: "Kreativ",
     },
   ];
+
   return (
     <section className={`box ${styles.hero} section`}>
       <div className={styles.left}>
         <p className={styles.hero_title}>
           Millionlab insonlar
-          <span> uchun raqamli </span>
+          <span className=""> uchun raqamli </span>
           <span>mahsulotlarni loyihalashtiramiz</span>
         </p>
         <div className={styles.plusses}>
@@ -39,14 +41,21 @@ export default function Hero() {
       </div>
       <div className={styles.right}>
         <div className={styles.dids}>
-          <p className={styles.dids_title}>400</p>
+          <p className={styles.dids_title}>
+            <Counter number={400} />
+          </p>
           <p className={styles.dids_desc}>Web sayt loyihalarimiz</p>
         </div>
         <div className={styles.dids}>
-          <p className={styles.dids_title}>67</p>
+          <p className={styles.dids_title}>
+            <Counter number={67} />
+          </p>
           <p className={styles.dids_desc}>Mobile ilova loyihalarimiz</p>
         </div>
       </div>
     </section>
   );
 }
+const Counter = ({ number }: { number: number }) => {
+  return <CountUp duration={10} className="counter" end={number} />;
+};

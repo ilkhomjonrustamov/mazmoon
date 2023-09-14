@@ -72,6 +72,9 @@
   justify-content: space-between;
   gap: 16px;
 }
+.motion {
+  width: 100%;
+}
 .job {
   border-radius: 24px;
   background: var(--apple-grey, #f5f5f7);

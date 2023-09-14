@@ -12,10 +12,14 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import Layout from "@/components/layout/layout";
 import { CustomHead } from "@/components/layout/head";
+import Toast from "@/components/toast";
+import { useContext } from "react";
+import { FormContext } from "@/store/form";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const { isSuccess } = useContext(FormContext);
   return (
     <>
       <CustomHead title={`Mazmoon Group`} desc={""} canonical={"/"} />
@@ -27,6 +31,11 @@ export default function Home() {
         <Comments />
         <Companies />
       </Layout>
+      <Toast
+        variant="success"
+        toast={isSuccess ? true : false}
+        message="Muvaffaqiyatli yuborildi!"
+      />
     </>
   );
 }

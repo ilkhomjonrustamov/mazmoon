@@ -5,8 +5,10 @@ import { ModalContext } from "@/store/modal";
 import { close, feather } from "@/public/icons";
 import { IMaskInput } from "react-imask";
 import axios from "axios";
+import { FormContext } from "@/store/form";
 export default function Modal() {
   const { variant, setIsModal } = useContext(ModalContext);
+  const { setIsSuccess } = useContext(FormContext);
   const project_type = [
     {
       title: "Web site",
@@ -62,7 +64,7 @@ export default function Modal() {
   const [price, setPrice] = useState("");
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false);
+
   const channel =
     "https://api.telegram.org/bot6355664113:AAHDlbvECU7akBE_QoJuPOMIMEJjzS2vdl0/sendMessage?parse_mode=HTML&chat_id=-1001823370666&";
 
@@ -85,6 +87,7 @@ export default function Modal() {
     setMessage("");
     setPrice("");
     setType("");
+    setIsModal(false);
   };
 
   return (
@@ -152,7 +155,9 @@ export default function Modal() {
               <div className={styles.store_form_inputs}>
                 <input
                   type="text"
-                  className={styles.store_input}
+                  className={`${styles.store_input} ${
+                    name.length > 0 ? styles.black_btm : ""
+                  }`}
                   placeholder={`Ismingiz nima?*`}
                   required
                   value={name}
@@ -165,7 +170,11 @@ export default function Modal() {
                   value={email}
                   onChange={(e) => setEmail(email)}
                 /> */}
-                <div className={styles.number}>
+                <div
+                  className={`${styles.number} ${
+                    number.length > 0 ? styles.black_btm : ""
+                  }`}
+                >
                   <span className={`${number.length > 0 ? styles.black : ""}`}>
                     +998
                   </span>
@@ -185,7 +194,9 @@ export default function Modal() {
                 cols={30}
                 rows={6}
                 placeholder={"Har qanday izohingiz"}
-                className={styles.store_input}
+                className={`${styles.store_input} ${
+                  message.length > 0 ? styles.black_btm : ""
+                } `}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>

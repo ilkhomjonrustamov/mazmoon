@@ -28,6 +28,7 @@
 }
 
 :root {
+  --black: #292929;
   --interface: "Interface regular";
   --interface-medium: "Interface medium";
   --interface-semibold: "Interface semibold";

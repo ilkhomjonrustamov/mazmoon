@@ -4,19 +4,51 @@
   gap: 16px;
 }
 
-.company {
-  width: 100%;
-  padding: 20px;
+.company_inner {
+  max-width: 320px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 176px;
   border-top: 1px solid var(--grey-24, #c2c2c3);
   background: var(--white, #fff);
   position: relative;
   display: grid;
   place-items: center;
 }
+.company_inner_swiper {
+  max-width: 320px;
+  width: 100%;
+}
+.company_inner_swiper_slide {
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.company_img_box {
+  /* position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0; */
+  width: 122px;
+  height: 52px;
+  position: relative;
+}
+
 .section_title {
   max-width: 768px;
 }
-.img_box {
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+/* .img_box {
   display: grid;
   place-items: center;
   background-color: white;
@@ -32,16 +64,15 @@
   max-width: 122px;
   width: 100%;
   object-fit: contain;
-}
+}*/
 .id {
   color: var(--black, #292929);
 
-  /* Body 2/Regular */
   font-family: var(--interface);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%; /* 19.6px */
+  line-height: 140%;
   position: absolute;
   top: 20px;
   left: 20px;
